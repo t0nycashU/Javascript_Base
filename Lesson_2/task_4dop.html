@@ -1,0 +1,17 @@
+<script>
+
+var a = +prompt("Введите число от 1 до 15:");
+var n = 15 - a;
+
+function outputOfNum(n, a){
+            var num = a;
+            outputOfNumStrong = num + " ";
+            num = ++num;
+            if (n > 0)
+                outputOfNumStrong += outputOfNum(n - 1, num);
+        
+        return outputOfNumStrong; 
+    }
+
+alert(outputOfNum(n, a));
+</script>
