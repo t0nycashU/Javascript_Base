@@ -1,0 +1,23 @@
+<script>
+        console.log("Ответ на задание №1");
+        
+        var max = 999;
+        var obj = {
+          number: prompt("Введите число от 0 до 999:"),
+          units: 0,
+          tens: 0,
+          hundreds: 0,
+        };
+        if (obj.number <= 9){
+          obj.units = obj.number;
+        } else if (obj.number <= 999){
+          obj.units = Math.floor(obj.number % 10);
+          obj.tens = Math.floor(obj.number / 10 % 10);
+          obj.hundreds = Math.floor(obj.number / 100 % 10);
+        }else {
+            obj.number = 0;
+            console.log('Вы ввели число за диапазоном 0 - 999');
+        }
+        console.log(obj);
+
+    </script>
